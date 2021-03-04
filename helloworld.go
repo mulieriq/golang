@@ -3,5 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println( "Hell0 Friend")
+	 x :=89
+	fmt.Println(x)
 }
