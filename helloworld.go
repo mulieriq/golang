@@ -41,5 +41,15 @@ func main() {
 		}
 		y = false
 	}
-var a[5]int
+	var a [5]int
+	a[0] = 1
+	a[1] = 187
+	a[2] = 18
+	a[3] = 19
+	a[4] = 1
+	total:=0
+	for i :=0;i<5;i++{
+		total+=a[i]
+	}
+	fmt.Println(total)
 }
