@@ -24,7 +24,19 @@ func main() {
 	y := true
 	for y == true {
 		for i >= 0 {
-			fmt.Println(i)
+			//if i%2 == 0 {
+			//	println(i, "is even")
+			//} else {
+			//	println(i, "is odd")
+			//}
+			//fmt.Println(i)
+			switch i {
+			case 0:
+				print("1...")
+			case 1:
+				print("4")
+
+			}
 			i--
 		}
 		y = false
