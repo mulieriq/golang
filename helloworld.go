@@ -20,4 +20,10 @@ func main() {
 	fmt.Scan(&name)
 	fmt.Println("your name is",name)
 
+	i:=10
+	for i >=0{
+		fmt.Println(i)
+		i--
+	}
+
 }
