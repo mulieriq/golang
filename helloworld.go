@@ -14,6 +14,10 @@ func main() {
 	var x int = 6
 	fmt.Println(x)
 	v:=8
-	print(v)
+	println(v)
+	var name string
+	fmt.Println("Please enter name")
+	fmt.Scan(&name)
+	fmt.Println("your name is",name)
 
 }
