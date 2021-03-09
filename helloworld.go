@@ -41,5 +41,5 @@ func main() {
 		}
 		y = false
 	}
-
+var a[5]int
 }
