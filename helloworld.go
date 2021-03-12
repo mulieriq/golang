@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"net/http"
 )
@@ -105,16 +106,30 @@ func main() {
 	p.toString()
 	p.setAge(45)
 	p.toString()
-///INTERFACE AND STRUCTS
-var ab animal
-ab = snake{Poison: true}
-fmt.Println(ab.description())
-//ERROR HANDLING
-resp,err := http.Get("http://talanta.skylabstech.co.ke/public/api/v1/feed")
-if err != nil{
-	fmt.Println("error...........",err)
-	return
-}
-fmt.Println(resp)
+	///INTERFACE AND STRUCTS
+	var ab animal
+	ab = snake{Poison: true}
+	fmt.Println(ab.description())
+	//ERROR HANDLING
+	resp, err := http.Get("http://talanta.skylabstech.co.ke/public/api/v1/feed")
+	if err != nil {
+		fmt.Println("error...........", err)
+		return
+	}
+	fmt.Println(resp)
+	num:=6
+	if inc,err:=increment(num);err != nil {
+		fmt.Println("fail",inc,err)
+	}else {
+		fmt.Print(inc)
+	}
 
+}
+
+func increment(n int) (int, error) {
+	if n < 0 {
+		return 0, errors.New("Math error ...only numhers")
+	} else {
+		return n, nil
+	}
 }
