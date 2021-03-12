@@ -18,14 +18,14 @@ type cat struct {
 }
 type snake struct {
 	Type   string
-	Poison string
+	Poison bool
 }
 
 func (s snake) description() string {
-	return fmt.Sprint("Poison: %v", s.Poison)
+	return fmt.Sprint("Poison: %w", s.Poison)
 }
 func (c cat) description() string {
-	return fmt.Sprint("Sound: %v", c.Sound)
+	return fmt.Sprint("Sound: %w", c.Sound)
 }
 
 func (p *Person) toString() {
@@ -105,4 +105,7 @@ func main() {
 	p.setAge(45)
 	p.toString()
 
+var ab animal
+ab = snake{Poison: true}
+fmt.Println(ab.description())
 }
