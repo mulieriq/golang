@@ -9,6 +9,20 @@ type Person struct {
 	age int
 }
 
+type animal interface {
+	description()string
+}
+type cat struct {
+	Type string
+	Sound string
+}
+type snake struct {
+
+	Type string
+	Poison string
+
+}
+
 func (p*Person) toString() {
 	fmt.Printf("%v is %v years old",p.name,p.age)
 }
@@ -85,6 +99,8 @@ func main() {
  p.toString()
  p.setAge(45)
  p.toString()
+
+
 
 
 }
