@@ -4,6 +4,17 @@ import (
 	"fmt"
 )
 
+type Person struct {
+	name string
+	age int
+}
+
+func (p*Person) toString() {
+	fmt.Printf("%v is %v years old",p.name,p.age)
+}
+func (p*Person)setAge(age int)  {
+	p.age = age
+}
 func main() {
 	muli := "34ggjitgaio"
 	fmt.Print("Enter a number: ")
@@ -42,31 +53,40 @@ func main() {
 		y = false
 	}
 	var a []int
-	a = append(a, 1,2,3)
+	a = append(a, 1, 2, 3)
 
-	total:=0
-	for i :=0;i< len(a);i++{
-		total+=a[i]
+	total := 0
+	for i := 0; i < len(a); i++ {
+		total += a[i]
 	}
 	fmt.Println(total)
 
-
-	var c [] int
-	c = make([]int,0,10)
-	c = append(a, 1,2,3,45,6,7,8,9,9)
+	var c []int
+	c = make([]int, 0, 10)
+	c = append(a, 1, 2, 3, 45, 6, 7, 8, 9, 9)
 	fmt.Println(c)
 
-
+	//MAPS
 
 	var m = map[string]bool{
-		"GO":true,
-		"Python":false,
+		"GO":     true,
+		"Python": false,
 	}
-	m2:=m["Python"]
-	m["GO"]= false
-	fmt.Println("Value fo go is ",m["GO"],m2)
-	delete(m,"GO")
-	m["name"]=true
-	fmt.Println("Value fo go is ",m["GO"],m)
+	m2 := m["Python"]
+	m["GO"] = false
+	fmt.Println("Value fo go is ", m["GO"], m2)
+	delete(m, "GO")
+	m["name"] = true
+	fmt.Println("Value fo go is ", m["GO"], m)
+	//METHODS
+ p := Person{
+ 	name:"BOV",
+ 	age:34}
+ p.toString()
+ p.setAge(45)
+ p.toString()
+
 
 }
+
+
