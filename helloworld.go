@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 )
 
 type Person struct {
@@ -104,8 +105,11 @@ func main() {
 	p.toString()
 	p.setAge(45)
 	p.toString()
-
+///INTERFACE AND STRUCTS
 var ab animal
 ab = snake{Poison: true}
 fmt.Println(ab.description())
+//ERROR HANDLING
+resp,err := http.Get("https://cdmccu.skylabstech.so.ke")
+
 }
