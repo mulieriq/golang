@@ -55,4 +55,18 @@ func main() {
 	c = make([]int,0,10)
 	c = append(a, 1,2,3,45,6,7,8,9,9)
 	fmt.Println(c)
+
+
+
+	var m = map[string]bool{
+		"GO":true,
+		"Python":false,
+	}
+	m2:=m["Python"]
+	m["GO"]= false
+	fmt.Println("Value fo go is ",m["GO"],m2)
+	delete(m,"GO")
+	m["name"]=true
+	fmt.Println("Value fo go is ",m["GO"],m)
+
 }
