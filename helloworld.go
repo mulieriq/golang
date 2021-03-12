@@ -116,8 +116,8 @@ func main() {
 		fmt.Println("error...........", err)
 		return
 	}
-	fmt.Println(resp)
-	num:=6
+	fmt.Println(resp.Body)
+	num:=6453553
 	if inc,err:=increment(num);err != nil {
 		fmt.Println("fail",inc,err)
 	}else {
