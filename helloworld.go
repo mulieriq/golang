@@ -41,12 +41,9 @@ func main() {
 		}
 		y = false
 	}
-	var a [5]int
-	a[0] = 1
-	a[1] = 187
-	a[2] = 18
-	a[3] = 19
-	a[4] = 1
+	var a []int
+	a = append(a, 1,2,3,4,5,6)
+
 	total:=0
 	for i :=0;i<5;i++{
 		total+=a[i]
