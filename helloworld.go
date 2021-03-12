@@ -42,11 +42,17 @@ func main() {
 		y = false
 	}
 	var a []int
-	a = append(a, 1,2,3,4,5,6)
+	a = append(a, 1,2,3)
 
 	total:=0
-	for i :=0;i<5;i++{
+	for i :=0;i< len(a);i++{
 		total+=a[i]
 	}
 	fmt.Println(total)
+
+
+	var c [] int
+	c = make([]int,0,10)
+	c = append(a, 1,2,3,45,6,7,8,9,9)
+	fmt.Println(c)
 }
