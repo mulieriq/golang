@@ -6,27 +6,32 @@ import (
 
 type Person struct {
 	name string
-	age int
+	age  int
 }
 
 type animal interface {
-	description()string
+	description() string
 }
 type cat struct {
-	Type string
+	Type  string
 	Sound string
 }
 type snake struct {
-
-	Type string
+	Type   string
 	Poison string
-
 }
 
-func (p*Person) toString() {
-	fmt.Printf("%v is %v years old",p.name,p.age)
+func (s snake) description() string {
+	return fmt.Sprint("Poison: %v", s.Poison)
 }
-func (p*Person)setAge(age int)  {
+func (c cat) description() string {
+	return fmt.Sprint("Sound: %v", c.Sound)
+}
+
+func (p *Person) toString() {
+	fmt.Printf("%v is %v years old", p.name, p.age)
+}
+func (p *Person) setAge(age int) {
 	p.age = age
 }
 func main() {
@@ -93,16 +98,11 @@ func main() {
 	m["name"] = true
 	fmt.Println("Value fo go is ", m["GO"], m)
 	//METHODS
- p := Person{
- 	name:"BOV",
- 	age:34}
- p.toString()
- p.setAge(45)
- p.toString()
-
-
-
+	p := Person{
+		name: "BOV",
+		age:  34}
+	p.toString()
+	p.setAge(45)
+	p.toString()
 
 }
-
-
