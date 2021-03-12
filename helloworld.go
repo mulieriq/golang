@@ -110,6 +110,11 @@ var ab animal
 ab = snake{Poison: true}
 fmt.Println(ab.description())
 //ERROR HANDLING
-resp,err := http.Get("https://cdmccu.skylabstech.so.ke")
+resp,err := http.Get("http://talanta.skylabstech.co.ke/public/api/v1/feed")
+if err != nil{
+	fmt.Println("error...........",err)
+	return
+}
+fmt.Println(resp)
 
 }
