@@ -38,6 +38,7 @@ func (p *Person) setAge(age int) {
 	p.age = age
 }
 func main() {
+	go call()
 	muli := "34ggjitgaio"
 	fmt.Print("Enter a number: ")
 	fmt.Println("1+1 =", 14%5, muli[1:2])
@@ -124,6 +125,7 @@ func main() {
 	}else {
 		fmt.Print(inc)
 	}
+
 
 }
 
