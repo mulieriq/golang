@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"time"
 )
 
 type Person struct {
@@ -132,4 +133,9 @@ func increment(n int) (int, error) {
 	} else {
 		return n, nil
 	}
+}
+
+func call (){
+	time.Sleep(time.Second *2)
+	fmt.Println("i hve been called")
 }
