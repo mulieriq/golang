@@ -119,13 +119,12 @@ func main() {
 		return
 	}
 	fmt.Println(resp.Body)
-	num:=6453553
-	if inc,err:=increment(num);err != nil {
-		fmt.Println("fail",inc,err)
-	}else {
+	num := 6453553
+	if inc, err := increment(num); err != nil {
+		fmt.Println("fail", inc, err)
+	} else {
 		fmt.Print(inc)
 	}
-
 
 }
 
@@ -137,7 +136,7 @@ func increment(n int) (int, error) {
 	}
 }
 
-func call (){
-	time.Sleep(time.Second *2)
+func call() {
+	time.Sleep(time.Second * 2)
 	fmt.Println("i hve been called")
 }
