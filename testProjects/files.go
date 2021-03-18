@@ -1,7 +1,11 @@
 package main
 
-import "os"
+import (
+	"os"
+)
 
-func  main()  {
-	os.Create("test.json",)
+func main() {
+	f, _ := os.Create("test.txt")
+	f.Write([]byte("Hello world"))
+
 }
