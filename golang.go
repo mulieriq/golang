@@ -69,7 +69,6 @@ func main() {
 				print("1...")
 			case 1:
 				print("4")
-
 			}
 			i--
 		}
@@ -112,7 +111,7 @@ func main() {
 	var ab animal
 	ab = snake{Poison: true}
 	fmt.Println(ab.description())
-	//ERROR HANDLING
+	//ERROR HANDLING Block
 	resp, err := http.Get("http://talanta.skylabstech.co.ke/public/api/v1/feed")
 	if err != nil {
 		fmt.Println("error...........", err)
@@ -125,7 +124,6 @@ func main() {
 	} else {
 		fmt.Print(inc)
 	}
-
 }
 
 func increment(n int) (int, error) {
