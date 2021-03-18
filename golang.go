@@ -124,6 +124,12 @@ func main() {
 	} else {
 		fmt.Print(inc)
 	}
+	//////////Channels
+	f:= make(chan string)
+	//go x() {f <- "Hello"}()
+	go xd(f)
+	msg := <-f
+	fmt.Println(msg)
 }
 
 func increment(n int) (int, error) {
@@ -137,4 +143,7 @@ func increment(n int) (int, error) {
 func call() {
 	time.Sleep(time.Second * 2)
 	fmt.Println("i hve been called")
+}
+func xd(f chan <- string){
+	f <- "Hi"
 }
