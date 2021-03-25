@@ -53,7 +53,6 @@ func main() {
 	fmt.Println("Please enter name")
 	fmt.Scan(&name)
 	fmt.Println("your name is", name)
-
 	i := 10
 	y := true
 	for y == true {

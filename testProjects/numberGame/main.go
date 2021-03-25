@@ -1,1 +1,5 @@
-package numberGame
+package main
+
+func  main()  {
+	
+}
