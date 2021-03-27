@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//go basics
 func main() {
 	var (
 		a = 2
