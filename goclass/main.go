@@ -1,7 +1,5 @@
 package main
 
-import "os"
-
 //type Person struct {
 //	Name   string
 //	Power  int
@@ -29,12 +27,16 @@ import "os"
 //}
 
 func main() {
-	file,err := os.Open("main.go")
-	if err !=nil{
-		println(err)
-		return
-	}
-	defer file.Close()
+
+
+
+
+	//file,err := os.Open("main.go")
+	//if err !=nil{
+	//	println(err)
+	//	return
+	//}
+	//defer file.Close()
 
 
 	//fmt.Println("Hello")
