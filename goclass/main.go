@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"strconv"
-)
+import "os"
 
 //type Person struct {
 //	Name   string
@@ -33,18 +29,26 @@ import (
 //}
 
 func main() {
-	fmt.Println("Hello")
-
-	if len(os.Args) != 2 {
-		os.Exit(1)
+	file,err := os.Open("main.go")
+	if err !=nil{
+		println(err)
+		return
 	}
-	n, err := strconv.Atoi(os.Args[1])
-	if err != nil {
-		println("non number")
+	defer file.Close()
 
-	} else {
-		print(n)
-	}
+
+	//fmt.Println("Hello")
+	//
+	//if len(os.Args) != 2 {
+	//	os.Exit(1)
+	//}
+	//n, err := strconv.Atoi(os.Args[1])
+	//if err != nil {
+	//	println("non number")
+	//
+	//} else {
+	//	print(n)
+	//}
 	//fmt.Println("Its Over man", os.Args[0], os.Args[1])
 	//name := power(os.Args[1])
 	//fmt.Println("MULTY", name)
