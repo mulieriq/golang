@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"time"
+)
+
 //type Person struct {
 //	Name   string
 //	Power  int
@@ -27,6 +32,10 @@ package main
 //}
 
 func main() {
+	fmt.Println("Starting")
+	go process()
+	time.Sleep(time.Millisecond *10)
+	println("DOne")
 
 
 
@@ -56,6 +65,10 @@ func main() {
 	//fmt.Println("MULTY", name)
 	//exp()
 
+}
+
+func process() {
+	fmt.Println("Running process..")
 }
 
 //func power(args string) string {
