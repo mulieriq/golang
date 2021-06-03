@@ -34,7 +34,7 @@ import (
 func main() {
 	fmt.Println("Starting")
 	go process()
-	time.Sleep(time.Millisecond *10)
+	time.Sleep(time.Millisecond *100)
 	println("DOne")
 
 
